@@ -11,8 +11,16 @@
 class Multiplicacion{
 	public:
 		float calculo(float obj1, float obj2);
+		Multiplicacion calculo(Multiplicacion obj1,Multiplicacion obj2);
+		float getNum1(void);
+		void imprimir();
+   		void setNum1(float newNum1);
+   		Multiplicacion();
+   		Multiplicacion(float nu1);
+		~Multiplicacion();
 	protected:
 	private:
+		float num1;	
 };
 
 #endif

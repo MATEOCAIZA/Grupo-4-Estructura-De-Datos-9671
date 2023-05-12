@@ -7,7 +7,8 @@
  */
  
 #include "Fraccion.h"
-
+#include "Operacion.h"
+#include "Multiplicacion.h"
 #if !defined(__Class_Diagram_1_Proceso_h)
 #define __Class_Diagram_1_Proceso_h
 
@@ -15,6 +16,7 @@ class Proceso
 {
 public:
    virtual float calculo(float obj1, float obj2) = 0;
+   virtual Operacion calculo(Operacion obj1,Operacion obj2)=0;
    virtual Fraccion calculo(Fraccion obj1, Fraccion obj2) = 0;
 protected:
 private:

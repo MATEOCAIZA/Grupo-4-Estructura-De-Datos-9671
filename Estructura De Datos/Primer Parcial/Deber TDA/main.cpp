@@ -32,11 +32,22 @@ int main(){
 	float nume = resultado.getNumerador();
 	float deno = resultado.getDenominador();
 	std::cout<<" "<<std::endl;
-	std::cout<<"Resultado en decimal: "<<resultado.calculo(nume,deno)<<endl;
+	std::cout<<"Resultado en decimal: "<<resultado.calculo(nume,deno)<<std::endl;
 	
-	Operacion operacion1;
-	std::cout<<"La Suma del denominador y el numerador es: "<<operacion1.calculo(nume,deno)<<endl;
-	Multiplicacion multi1;
-	std::cout<<"La Multiplicacion del denominador y el numerador es: "<<multi1.calculo(nume,deno)<<endl;
+	Operacion operacion1(nume);
+	Operacion operacion2(deno);
+	std::cout<<"La Suma del denominador y el numerador es: "<<operacion1.calculo(nume,deno)<<std::endl;
+	Multiplicacion multi1(nume);
+	Multiplicacion multi2(deno);
+	std::cout<<"La Multiplicacion del denominador y el numerador es: "<<multi1.calculo(nume,deno)<<std::endl;
+	
+	
+	std::cout<<"Usando TDA"<<std::endl;
+	
+	Operacion resultado1 = operacion1.calculo(operacion1,operacion2);
+	Multiplicacion resultado2 = multi1.calculo(multi1,multi2);
+	
+	resultado1.imprimir();
+	resultado2.imprimir();
 	return 0;
 }

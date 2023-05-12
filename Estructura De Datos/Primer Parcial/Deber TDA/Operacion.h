@@ -12,8 +12,16 @@
 class Operacion{
 	public:
 		float calculo(float obj1, float obj2);
+		Operacion calculo(Operacion obj1,Operacion obj2);
+		float getNum1(void);
+   		void setNum1(float newNum1);
+   		void imprimir ();
+   		Operacion(float nu1);
+   		Operacion();
+   		~Operacion();
 	protected:
-	private:	
+	private:
+		float num1;	
 };
 
 #endif
