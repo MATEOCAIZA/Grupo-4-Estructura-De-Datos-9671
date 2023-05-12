@@ -1,9 +1,11 @@
-/***********************************************************************
- * Module:  Fraccion.cpp
- * Author:  Fernando
- * Modified: miércoles, 10 de mayo de 2023 8:20:15
- * Purpose: Implementation of the class Fraccion
- ***********************************************************************/
+/*UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE
+ * Nombre del archivo: Fraccion.cpp
+ * Fecha de creación: 10/05/2023 
+ * Fecha de modificación: 11/05/2023 
+ * Autores:  David Toapanta, Carlos Torres, Mateo Llumigusin 
+ * Descripción: Implementacion clase Fraccion
+ */
+ 
 
 #include "Fraccion.h"
 #include "Proceso.h"
