@@ -1,18 +1,18 @@
 /*UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE
  * Nombre del archivo: Fraccion.cpp
- * Fecha de creaci√≥n: 10/05/2023 
+ * Fecha de creaciÛn: 10/05/2023 
  * Fecha de modificaci√≥n: 11/05/2023 
  * Autores:  David Toapanta, Carlos Torres, Mateo Llumigusin 
  * Descripci√≥n: Implementacion clase Fraccion
  */
- 
 
 #include "Fraccion.h"
 #include "Proceso.h"
 #include <iostream>
+
 ////////////////////////////////////////////////////////////////////////
 // Name:       Fraccion::getNumerador()
-// Purpose:    Implementation of Fraccion::getNumerador()
+// Purpose:    Retorna el valor del numerador de la fracciÛn.
 // Return:     float
 ////////////////////////////////////////////////////////////////////////
 
@@ -23,9 +23,9 @@ float Fraccion::getNumerador(void)
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Fraccion::setNumerador(float newNumerador)
-// Purpose:    Implementation of Fraccion::setNumerador()
+// Purpose:    Establece el valor del numerador de la fracciÛn.
 // Parameters:
-// - newNumerador
+// - newNumerador: El valor del nuevo numerador.
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
@@ -36,7 +36,7 @@ void Fraccion::setNumerador(float newNumerador)
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Fraccion::getDenominador()
-// Purpose:    Implementation of Fraccion::getDenominador()
+// Purpose:    Retorna el valor del denominador de la fracciÛn.
 // Return:     float
 ////////////////////////////////////////////////////////////////////////
 
@@ -47,9 +47,9 @@ float Fraccion::getDenominador(void)
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Fraccion::setDenominador(float newDenominador)
-// Purpose:    Implementation of Fraccion::setDenominador()
+// Purpose:    Establece el valor del denominador de la fracciÛn.
 // Parameters:
-// - newDenominador
+// - newDenominador: El valor del nuevo denominador.
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
@@ -60,46 +60,81 @@ void Fraccion::setDenominador(float newDenominador)
 
 ////////////////////////////////////////////////////////////////////////
 // Name:       Fraccion::Fraccion(float num, float den)
-// Purpose:    Implementation of Fraccion::Fraccion()
+// Purpose:    Constructor de la clase Fraccion que toma como par·metros 
+//             el numerador y el denominador de la fracciÛn.
 // Parameters:
-// - num
-// - den
-// Return:     
+// - num: El valor del numerador de la fracciÛn.
+// - den: El valor del denominador de la fracciÛn.
+// Return:     void
 ////////////////////////////////////////////////////////////////////////
 
 Fraccion::Fraccion(float num, float den)
 {
-   // TODO : implement
    this->numerador=num;
    this->denominador=den;
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Fraccion::Fraccion()
+// Purpose:    Constructor de la clase Fraccion que inicializa el 
+//             numerador y denominador en 0.
+// Return:     void
+////////////////////////////////////////////////////////////////////////
 
 Fraccion::Fraccion(){
 	this->numerador=0;
 	this->denominador=0;
 }
+
 ////////////////////////////////////////////////////////////////////////
 // Name:       Fraccion::~Fraccion()
-// Purpose:    Implementation of Fraccion::~Fraccion()
-// Return:     
+// Purpose:    Destructor de la clase Fraccion.
+// Return:     void
 ////////////////////////////////////////////////////////////////////////
 
 Fraccion::~Fraccion()
 {
-   // TODO : implement
+   // TODO : implementar
 }
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Fraccion::calculo(Fraccion obj1, Fraccion obj2)
+// Purpose:    Toma dos objetos Fraccion como par·metros y devuelve otro 
+//             objeto Fraccion que representa la suma de los dos objetos originales.
+// Parameters:
+// - obj1: El primer objeto Fraccion a sumar.
+// - obj2: El segundo objeto Fraccion a sumar.
+// Return:     Fraccion: El objeto Fraccion resultante de la suma.
+////////////////////////////////////////////////////////////////////////
 
 Fraccion Fraccion::calculo(Fraccion obj1, Fraccion obj2){
-	Fraccion obj3;
-	obj3.setDenominador(obj1.getDenominador()*obj2.getDenominador());
-	obj3.setNumerador((obj1.getNumerador()*obj2.getDenominador())+(obj2.getNumerador()*obj1.getDenominador()));
-	return obj3;
-}
-	
-void Fraccion::imprimir(Fraccion obj){
-	std::cout<<obj.getNumerador()<<"/"<<obj.getDenominador();
+Fraccion obj3;
+obj3.setDenominador(obj1.getDenominador()*obj2.getDenominador());
+obj3.setNumerador((obj1.getNumerador()*obj2.getDenominador())+(obj2.getNumerador()*obj1.getDenominador()));
+return obj3;
 }
 
+////////////////////////////////////////////////////////////////////////
+// Name: Fraccion::imprimir
+// Purpose: Imprime una fracciÛn en formato de numerador/denominador
+// Parameters:
+// - obj: fracciÛn a imprimir
+// Return: void
+////////////////////////////////////////////////////////////////////////
+
+void Fraccion::imprimir(Fraccion obj){
+std::cout<<obj.getNumerador()<<"/"<<obj.getDenominador();
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name: Fraccion::calculo
+// Purpose: Realiza el c·lculo de la divisiÛn entre dos n˙meros
+// Parameters:
+// - obj1: dividendo
+// - obj2: divisor
+// Return: float con el resultado de la divisiÛn
+////////////////////////////////////////////////////////////////////////
+
 float Fraccion::calculo(float obj1, float obj2){
-	return (obj1/obj2);
+return (obj1/obj2);
 }
